@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'BurningEther/nvimux'
 Plug 'embear/vim-localvimrc'
 Plug 'sirtaj/vim-openscad'
 Plug 'tpope/vim-fugitive'
@@ -40,6 +41,19 @@ nmap <leader>p :CtrlP<cr>
 let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("v")': ['<c-v>', '<Bar>', '<RightMouse>'],
   \ }
+
+"
+" nvimux
+"
+
+lua require('nvimux').bootstrap()
+let g:nvimux_prefix = '<C-b>'
+let g:nvimux_open_term_by_default = 1
+let g:nvimux_new_window_buffer = 'single'
+let g:nvimux_quickterm_direction = 'botright'
+let g:nvimux_quickterm_orientation = 'vertical'
+let g:nvimux_quickterm_scope = 't'
+let g:nvimux_quickterm_size = '80'
 
 "
 " AirLine
